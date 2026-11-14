@@ -1,0 +1,31 @@
+# varve-coviant-extensions runtime definitions
+# Append or merge these blocks into $VARVE_DATA/runtimes.toml (~/.local/share/varve/runtimes.toml)
+# Run `just install` to copy the adapters into $VARVE_DATA/adapters/ automatically.
+
+[[row]]
+name = "antigravity"
+adapter = "antigravity.sql"
+source = "~/.gemini/antigravity-cli/brain"
+include = ["*.jsonl"]
+
+[[row]]
+name = "vibe"
+adapter = "vibe.sql"
+source = "~/.vibe/logs/session"
+include = ["*.json", "*.jsonl"]
+
+[[row]]
+name = "copilot"
+adapter = "copilot.sql"
+source = "~/.copilot"
+include = ["*.jsonl", "*.db", "*.db-wal"]
+replace = ["session-store.db", "session-store.db-wal"]
+
+# Enhanced dual-schema OpenCode adapter (supports both pre-2.0 and post-2.0 session_v2)
+# Replaces the default opencode.sql example in $VARVE_DATA/adapters/
+[[row]]
+name = "opencode"
+adapter = "opencode.sql"
+source = "~/.local/share/opencode"
+include = ["opencode.db", "opencode.db-wal"]
+replace = ["opencode.db", "opencode.db-wal"]

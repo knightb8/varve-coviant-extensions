@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# machine-specific agent artifacts (briefing, board) stay local
+docs/BRIEFING.md
+docs/BOARD.md
