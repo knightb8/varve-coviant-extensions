@@ -39,6 +39,9 @@ def _engine():
     return engine
 
 
+engine = _engine  # public alias for step definitions
+
+
 def run_sql(query, timeout=300):
     """Run a read-only query against the lake through the engine runner."""
     import subprocess
@@ -74,6 +77,7 @@ def stores_with_meta():
 
 
 def before_all(context):
+    context.repo = REPO
     context.run_sql = run_sql
     context.data_home = DATA
     context.mirrored_unified_stores = mirrored_unified_stores

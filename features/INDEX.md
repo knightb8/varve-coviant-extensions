@@ -5,6 +5,7 @@
 | Domain | Layer | Seq | Feature File | Capability Description |
 | :--- | :--- | :---: | :--- | :--- |
 | **adapter_tooling** | **cli** | 10 | `adapter_tooling/cli/adapter_compile_check-10.feature` | Extension adapters compile against DuckDB |
+| **lake_completeness** | **core** | 10 | `lake_completeness/core/end_to_end_coverage-10.feature` | End-to-end coverage of the session lake |
 | **vibe_ingestion** | **core** | 40 | `vibe_ingestion/core/vibe_legacy_regressions-40.feature` | Legacy vibe sessions are unaffected |
 | **vibe_ingestion** | **core** | 20 | `vibe_ingestion/core/vibe_unified_conversations-20.feature` | Conversations from unified stores are captured |
 | **vibe_ingestion** | **core** | 10 | `vibe_ingestion/core/vibe_unified_sessions-10.feature` | Vibe unified-store sessions reach the lake |
